@@ -19,7 +19,7 @@ add_executable("${EXE_NAME}" WIN32
 target_link_libraries(Magni Magnification)
 
 # add manifest
-if($<STREQUAL:"${CMAKE_BUILD_TYPE}","Release">)
+if("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
 	add_custom_command(
 		TARGET Magni
 		POST_BUILD
