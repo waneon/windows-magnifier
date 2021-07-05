@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.18)
+
+# set build type
+set(CMAKE_BUILD_TYPE Release)
 
 # set project name and version
 set(VERSION 0.1.0)
@@ -20,8 +23,10 @@ configure_file("${CMAKE_SOURCE_DIR}/config/version.h.in" version.h)
 target_include_directories(Magni PUBLIC "${CMAKE_BINARY_DIR}")
 
 # add manifest
-add_custom_command(
-	TARGET Magni
-	POST_BUILD
-	COMMAND "mt.exe" -manifest "${CMAKE_SOURCE_DIR}/src/magni.exe.manifest" -outputresource:"${CMAKE_BINARY_DIR}/Release/${EXE_NAME}.exe"\;\#1
-)
+if($<STREQUAL:"${CMAKE_BUILD_TYPE}","Release">)
+	add_custom_command(
+		TARGET Magni
+		POST_BUILD
+		COMMAND "mt.exe" -manifest "${CMAKE_SOURCE_DIR}/src/magni.exe.manifest" -outputresource:"${CMAKE_BINARY_DIR}/Release/${EXE_NAME}.exe"\;\#1
+	)
+endif()
