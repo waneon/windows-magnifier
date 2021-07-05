@@ -11,8 +11,8 @@ const int TIMER_MS = 8;
 void Magnify(const MagInfo& i);
 void UnMagnify(const MagInfo& i);
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR
-pCmdLine, int nCmdShow) {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
+                   int nCmdShow) {
     // get mag info
     MagInfo i = {};
     bool magnified = false;
