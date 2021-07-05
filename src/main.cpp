@@ -74,10 +74,12 @@ void Magnify(const MagInfo& i) {
     POINT p = {};
     GetCursorPos(&p);
 
-	int x = i.TransformX(p.x), y = i.TransformY(p.y);
+    int x = i.TransformX(p.x), y = i.TransformY(p.y);
 
     MagSetFullscreenTransform(i.GetMagFactor(), x, y);
 
+    // Magnification input transform feature
+    // uiAccess option should be enabled in manifest
     RECT rcDest;
     rcDest.left = 0;
     rcDest.top = 0;
