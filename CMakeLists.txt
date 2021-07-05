@@ -12,6 +12,7 @@ add_executable("${EXE_NAME}" WIN32
 	"${CMAKE_SOURCE_DIR}/src/main.cpp"
 	"${CMAKE_SOURCE_DIR}/src/maginfo.h"
 	"${CMAKE_SOURCE_DIR}/src/maginfo.cpp"
+	"${CMAKE_SOURCE_DIR}/res/app.rc"
 )
 
 # link magnification windows api
