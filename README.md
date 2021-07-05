@@ -2,8 +2,8 @@
 Magni is a simple, fast and smooth magnifier for Windows 10/11.
 
 ## Use
-`Alt+1`: toggle magnifier
-`Alt+2`: exit the program
+* `Alt+1`: toggle magnifier
+* `Alt+2`: exit the program
 
 ## Install
 
