@@ -5,25 +5,14 @@
 #include <iostream>
 
 #include "maginfo.h"
-#include "version.h"
 
 const int TIMER_MS = 8;
 
 void Magnify(const MagInfo& i);
 void UnMagnify(const MagInfo& i);
 
-// int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR
-// pCmdLine, int nCmdShow) {
-int main(int argc, char* argv[]) {
-    // print version
-    if (argc == 2) {
-        if (!strcmp(argv[1], "--version") || !strcmp(argv[1], "-v")) {
-            std::cout << VERSION << "\n";
-
-            return 0;
-        }
-    }
-
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR
+pCmdLine, int nCmdShow) {
     // get mag info
     MagInfo i = {};
     bool magnified = false;

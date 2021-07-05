@@ -4,23 +4,18 @@ cmake_minimum_required(VERSION 3.18)
 set(CMAKE_BUILD_TYPE Release)
 
 # set project name and version
-set(VERSION 0.1.0)
-project(Magni VERSION "${VERSION}")
+project(Magni VERSION 0.1.0)
 
 # make executable
 set(EXE_NAME Magni)
-add_executable("${EXE_NAME}"
+add_executable("${EXE_NAME}" WIN32
 	"${CMAKE_SOURCE_DIR}/src/main.cpp"
 	"${CMAKE_SOURCE_DIR}/src/maginfo.h"
 	"${CMAKE_SOURCE_DIR}/src/maginfo.cpp"
 )
 
-# link magnification library
+# link magnification windows api
 target_link_libraries(Magni Magnification)
-
-# make version information header file
-configure_file("${CMAKE_SOURCE_DIR}/config/version.h.in" version.h)
-target_include_directories(Magni PUBLIC "${CMAKE_BINARY_DIR}")
 
 # add manifest
 if($<STREQUAL:"${CMAKE_BUILD_TYPE}","Release">)
