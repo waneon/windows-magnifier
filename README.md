@@ -1,5 +1,6 @@
 # Magni
 Magni is a simple, fast and smooth magnifier for Windows 10/11.
+![preview](screenshot/preview.gif)
 
 ## Use
 * `Alt+1`: toggle magnifier
