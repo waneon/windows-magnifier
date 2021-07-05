@@ -5,10 +5,9 @@ Cursor position has an error in the screenshot, but there isn't in practice.
 
 ## Use
 * `Alt+1`: toggle magnifier
-* `Alt+2`: exit the program
 
 ## Install
-#### 1. [Download](https://github.com/waneon/windows-magnifier/releases) Magni.exe and Magni_cert.cer
+#### 1. [Download](https://github.com/waneon/windows-magnifier/releases/latest) Magni.exe and Magni_cert.cer
 #### 2. Install Magni_cert.cer "Trusted Root Certification Authorities" of the local machine.
 #### 3. Place Magni.exe to the secure locations
 * \Program Files\ subdirectoreis
