@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.18)
 set(CMAKE_BUILD_TYPE Release)
 
 # set project name and version
-project(Magni VERSION 0.1.0)
+project(Magni VERSION 0.1.1)
 
 # make executable
 set(EXE_NAME Magni)
