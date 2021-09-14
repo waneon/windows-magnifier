@@ -1,28 +1,26 @@
-cmake_minimum_required(VERSION 3.18)
-
-# set build type
-set(CMAKE_BUILD_TYPE Release)
+cmake_minimum_required(VERSION 3.14)
 
 # set project name and version
-project(Magni VERSION 0.1.1)
+project(windows-magnifier VERSION 0.1.1 LANGUAGES CXX)
+
+# set c++
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # make executable
-set(EXE_NAME Magni)
-add_executable("${EXE_NAME}" WIN32
-	"${CMAKE_SOURCE_DIR}/src/main.cpp"
-	"${CMAKE_SOURCE_DIR}/src/maginfo.h"
-	"${CMAKE_SOURCE_DIR}/src/maginfo.cpp"
-	"${CMAKE_SOURCE_DIR}/res/app.rc"
+add_executable("${CMAKE_PROJECT_NAME}" WIN32
+	src/main.cpp
+	src/maginfo.h
+	src/maginfo.cpp
+	res/app.rc
 )
 
 # link magnification windows api
-target_link_libraries(Magni Magnification)
+target_link_libraries("${CMAKE_PROJECT_NAME}" Magnification)
 
 # add manifest
-if("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-	add_custom_command(
-		TARGET Magni
-		POST_BUILD
-		COMMAND "mt.exe" -manifest "${CMAKE_SOURCE_DIR}/src/magni.exe.manifest" -outputresource:"${CMAKE_BINARY_DIR}/Release/${EXE_NAME}.exe"\;\#1
-	)
-endif()
+add_custom_command(
+	TARGET "${CMAKE_PROJECT_NAME}"
+	POST_BUILD
+	COMMAND mt.exe -manifest "${CMAKE_SOURCE_DIR}/manifest/magnifier.manifest" -outputresource:"${CMAKE_BINARY_DIR}/Release/${CMAKE_PROJECT_NAME}.exe"\;\#1
+)
