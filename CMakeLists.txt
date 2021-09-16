@@ -10,8 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # make executable
 add_executable("${CMAKE_PROJECT_NAME}" WIN32
 	src/main.cpp
-	src/MagInfo.h
-	src/MagInfo.cpp
+	src/Magnifier.h
+	src/Magnifier.cpp
 	res/app.rc
 )
 
