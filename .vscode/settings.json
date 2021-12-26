@@ -1,8 +1,0 @@
-{
-	"cmake.configureSettings": {
-		"CMAKE_BUILD_TYPE": "${buildType}"
-	},
-	"files.associations": {
-		"algorithm": "cpp"
-	}
-}
