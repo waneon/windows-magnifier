@@ -1,4 +1,6 @@
 # Magni
+**This repository has been deprecated. Use [magfy](https://github.com/waneon/magfy) instead.**
+
 Magni is a simple, fast and smooth magnifier for Windows 10/11.
 
 **Cursor position has an error in the screenshot, but there isn't in practice.**
