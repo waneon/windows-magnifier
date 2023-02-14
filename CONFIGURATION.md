@@ -22,8 +22,20 @@ shortcut:
 ```
 
 # shortcut
-format = Identifier: Content
-Identifier = (\<Modifier\>-)\*(\<Key\>|\<Button\>)
-Modifier = C(ctrl) | S(shift) | M(alt) | W(win)
-Key = A-Z | 0-9 | F1-F12
-Button = Left | Middle | Right | WheelUp | WheelDown | WheelLeft | WheelRight | Side1 | Side2
+## identifier
+identifier format = (\<Modifier\>-)\*(\<Key\>|\<Button\>)
+Modifier
+* `C`: ctrl
+* `S`: shift
+* `M`: alt
+* `W`: win
+Key
+* `0-9` | `A-Z` | `F1-F12`
+Button
+* `Left` | `Middle` | `Right` | `WheelUp` | `WheelDown` | `WheelLeft` | `WheelRight` | `Side1` | `Side2`
+## content
+action
+* `set`: set magnifier factor to given `factor`.
+* `add`: add magnifier factor by given `factor`. It can be negative value.
+* `toggle`: if current magnifier factor is 1.0, set magnifier factor to given `factor`, else, set to 1.0.
+* `exit`: exit the program.
