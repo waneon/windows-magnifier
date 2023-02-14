@@ -24,13 +24,16 @@ shortcut:
 # shortcut
 ## identifier
 **format** = (\<Modifier\>-)\*(\<Key\>|\<Button\>)
+<br/>
 **Modifier**
 * `C`: ctrl
 * `S`: shift
 * `M`: alt
 * `W`: win
+<br/>
 **Key**
 * `0-9` | `A-Z` | `F1-F12`
+<br/>
 **Button**
 * `Left` | `Middle` | `Right` | `WheelUp` | `WheelDown` | `WheelLeft` | `WheelRight` | `Side1` | `Side2`
 ## content
@@ -39,3 +42,5 @@ shortcut:
 * `add`: add magnifier factor by given `factor`. It can be negative value.
 * `toggle`: if current magnifier factor is 1.0, set magnifier factor to given `factor`, else, set to 1.0.
 * `exit`: exit the program.
+<br/>
+**factor**
